@@ -1,0 +1,28 @@
+<div class="starter-template">
+    <p class="lead">What is happening?</p>
+</div>
+
+<div class="col-md-6 offset-md-3">
+    <form id="sendTweet">
+        <input type="text" class="form-control" id="tweet">
+        <br />
+        <button  class="btn btn-primary">Tweet</button>
+    </form>
+
+    <br />
+    <br />
+
+    <div id="tweets">
+        {{#each tweets}}
+        <div class="media">
+            <div class="media-left usrphoto">
+                <a href="/user/{{ owner._id }}"><img class="media-object usrphoto" src="{{owner.photo }}" /></a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-body">{{ owner.name }}</h4>
+                <p>{{content}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

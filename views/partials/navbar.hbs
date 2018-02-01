@@ -1,0 +1,16 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Twitter</a>
+
+
+
+
+        <ul class="navbar-nav ">
+            {{#if user }}
+                <li class="nav-item"><a class="nav-link" href="/user/{{ user._id }}">{{ user.name }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+            {{/if}}
+        </ul>
+
+</nav>
